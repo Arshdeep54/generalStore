@@ -1,11 +1,11 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-ownerStock_df=pd.read_csv('D:\python project 12\ownerStock.csv',index_col=0)
+ownerStock_df=pd.read_csv('F:\generalStore\ownerStock.csv',index_col=0)
 
 
-costlistSeries=pd.read_csv('D:\python project 12\costlist.csv',index_col=0)
-sellingSeries=pd.read_csv('D:\python project 12\sellist.csv',index_col=0)
+costlistSeries=pd.read_csv('F:\generalStore\costlist.csv',index_col=0)
+sellingSeries=pd.read_csv('F:\generalStore\sellist.csv',index_col=0)
 
 costlist=costlistSeries.iloc[:,0].to_list()
 sellingList=sellingSeries.iloc[:,0].to_list()
@@ -13,9 +13,9 @@ sellingList=sellingSeries.iloc[:,0].to_list()
 def updateCsv():
     costlistSeries=pd.Series(costlist)
     sellingSeries=pd.Series(sellingList)
-    ownerStock_df.to_csv(r'D:\python project 12\ownerStock.csv')
-    costlistSeries.to_csv('D:\python project 12\costlist.csv')
-    sellingSeries.to_csv('D:\python project 12\sellist.csv')
+    ownerStock_df.to_csv(r'F:\generalStore\ownerStock.csv')
+    costlistSeries.to_csv('F:\generalStore\costlist.csv')
+    sellingSeries.to_csv('F:\generalStore\sellist.csv')
    
 updateCsv()
 
